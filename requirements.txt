@@ -1,0 +1,40 @@
+# --- Backend & API Framework ---
+fastapi                 # Main Job: A high-performance web framework for building APIs.
+                        # Role in Code: Creates all the backend API endpoints (e.g., /process-query, /health).
+
+uvicorn[standard]       # Main Job: An ASGI server to run the FastAPI application.
+                        # Role in Code: The web server that executes the FastAPI backend, making it accessible.
+
+# --- Frontend User Interface ---
+streamlit               # Main Job: A framework to create interactive web apps from Python scripts.
+                        # Role in Code: Builds the entire user-facing UI (User Mode and Admin Dashboard).
+
+requests                # Main Job: A library for making HTTP requests.
+                        # Role in Code: Acts as the bridge, allowing the Streamlit frontend to communicate with the FastAPI backend API.
+
+pandas                  # Main Job: A library for data analysis and manipulation, primarily using DataFrames.
+                        # Role in Code: Used in the Admin Dashboard to display the list of examples in a clean, tabular format.
+
+# --- Configuration & Secrets Management ---
+python-dotenv           # Main Job: Loads environment variables from a .env file.
+                        # Role in Code: Reads credentials like API keys and database strings from the .env file to keep them secure.
+
+# --- AI and Language Model Integration (LangChain) ---
+langchain               # Main Job: A framework for developing applications powered by language models.
+                        # Role in Code: Orchestrates the AI logic by providing core components like LLMChain and PromptTemplate.
+
+langchain-community     # Main Job: Contains community-provided integrations for LangChain.
+                        # Role in Code: Provides the Qdrant vector store wrapper and the SQLDatabase utility to connect to our databases.
+
+langchain-google-genai  # Main Job: The specific LangChain integration for Google's Gemini models.
+                        # Role in Code: Provides the ChatGoogleGenerativeAI and GoogleGenerativeAIEmbeddings classes to connect to and use Google's AI.
+
+# --- Databases ---
+qdrant-client           # Main Job: The official Python client for the Qdrant vector database.
+                        # Role in Code: Used for direct database operations like scrolling through all examples and deleting a specific example by its ID.
+
+SQLAlchemy              # Main Job: A SQL toolkit and Object-Relational Mapper (ORM) for Python.
+                        # Role in Code: Works in the background as the engine for the LangChain SQLDatabase utility, handling the actual connection and query execution against the SQL database.
+
+python-multipart        # Main Job: A library for handling multipart/form-data, which is used for file uploads.
+                        # Role in Code: Facilitates file uploads in the FastAPI backend, allowing users to submit files through the API.

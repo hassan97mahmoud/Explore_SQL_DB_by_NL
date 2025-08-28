@@ -1,0 +1,20 @@
+[
+  {
+    "nl": "How many customers are there in the USA?",
+    "sql": "SELECT COUNT(CustomerId) FROM Customer WHERE Country = 'USA';",
+    "tables": ["Customer"],
+    "type": "aggregation"
+  },
+  {
+    "nl": "Show me the names of all artists.",
+    "sql": "SELECT Name FROM Artist;",
+    "tables": ["Artist"],
+    "type": "selection"
+  },
+  {
+    "nl": "List all albums by the band 'AC/DC'.",
+    "sql": "SELECT al.Title FROM Album al JOIN Artist ar ON al.ArtistId = ar.ArtistId WHERE ar.Name = 'AC/DC';",
+    "tables": ["Album", "Artist"],
+    "type": "join"
+  }
+]
