@@ -51,7 +51,7 @@ Follow these steps to set up and run the project locally.
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/hassan97mahmoud/Explore_SQL_DB_by_NL.git
+git clone "https://github.com/hassan97mahmoud/Explore_SQL_DB_by_NL.git"
 cd Explore_SQL_DB_by_NL
 2. Create and Activate a Virtual Environment
 code
@@ -106,5 +106,5 @@ This will open the web application in your browser.
 📄 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 📬 Contact
-Hassan Abu Esmael - hmaboesmael@gmail.com
-Project Link: https://github.com/hassan97mahmoud/Explore_SQL_DB_by_NL
+Hassan Abu Esmael - "hmaboesmael@gmail.com"
+Project Link: "https://github.com/hassan97mahmoud/Explore_SQL_DB_by_NL"
