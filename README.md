@@ -1,3 +1,15 @@
+## 💻 Tech Stack
+
+The project is built with a modern Python technology stack:
+
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Google Gemini](https://img.shields.io/badge/Google%20Gemini-8E75B9?style=for-the-badge&logo=google&logoColor=white)
+![Qdrant](https://img.shields.io/badge/Qdrant-AC1431?style=for-the-badge&logo=qdrant&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+
 # Explore Your SQL Database with Natural Language
 
 This project provides a powerful and intuitive web interface that allows users to interact with a SQL database using plain English. It leverages the power of Google's Gemini models to convert natural language questions into executable SQL queries, runs them against the database, and returns the answers in a conversational format.
@@ -32,27 +44,13 @@ The application follows a logical pipeline to process a user's request:
 
 ---
 
-## 💻 Tech Stack
-
-The project is built with a modern Python technology stack:
-
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Google Gemini](https://img.shields.io/badge/Google%20Gemini-8E75B9?style=for-the-badge&logo=google&logoColor=white)
-![Qdrant](https://img.shields.io/badge/Qdrant-AC1431?style=for-the-badge&logo=qdrant&logoColor=white)
-![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white)
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-
----
-
 ## ⚙️ Setup and Installation
 
 Follow these steps to set up and run the project locally.
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/[Your-GitHub-Username]/Explore_SQL_DB_by_NL.git
+git clone https://github.com/hassan97mahmoud/Explore_SQL_DB_by_NL
 cd Explore_SQL_DB_by_NL
 2. Create and Activate a Virtual Environment
 It's highly recommended to use a virtual environment.
