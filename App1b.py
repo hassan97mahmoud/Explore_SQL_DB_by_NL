@@ -1,5 +1,3 @@
-# App1b.py (Backend - Corrected with latest model name)
-
 # --- Imports ---
 from fastapi import FastAPI, HTTPException, UploadFile, File, Query, Path
 from pydantic import BaseModel, Field
