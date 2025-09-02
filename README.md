@@ -4,23 +4,23 @@
 
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Google Gemini](https://img.shields.io/badge/Google%20Gemini-8E75B9?style=for-the-badge&logo=google&logoColor=white)
+![Cohere](https://img.shields.io/badge/Cohere-3755F9?style=for-the-badge&logo=cohere&logoColor=white)
 ![Qdrant](https://img.shields.io/badge/Qdrant-AC1431?style=for-the-badge&logo=qdrant&logoColor=white)
 
 </div>
 
-This project provides a powerful and intuitive web interface that allows users to interact with a SQL database using plain English. It leverages the power of Google's Gemini models to convert natural language questions into executable SQL queries, runs them against the database, and returns the answers in a conversational format.
+This project provides a powerful and intuitive web interface that allows users to interact with any SQL database using plain English. It leverages the power of state-of-the-art Large Language Models (LLMs) to convert natural language questions into executable SQL queries, runs them against the database, and returns the answers in a conversational format.
 
 ---
 
 ## 🚀 Key Features
 
--   **Natural Language to SQL:** Converts complex user questions in plain English into accurate SQL queries.
+-   **Natural Language to SQL:** Converts complex user questions into accurate SQL queries.
+-   **Dynamic Schema Loading:** Automatically inspects the connected database at startup, making the application adaptable to any SQL database without code changes.
 -   **Dual Architecture:** Built with a robust **FastAPI** backend for logic and a user-friendly **Streamlit** frontend for interaction.
--   **Powered by Google Gemini:** Utilizes the `gemini-1.5-pro-latest` model for advanced language understanding and query generation.
+-   **Powered by Cohere:** Utilizes the `command-r-plus` model for advanced language understanding and high-quality query generation.
 -   **Few-Shot Learning:** Improves query generation accuracy by retrieving similar examples from a **Qdrant** vector database.
--   **Interactive UI:** Allows users to ask questions and receive answers in a simple, chat-like interface.
--   **Admin Dashboard:** Includes a separate admin view for testing the full API response and monitoring the backend health.
+-   **Professional Debugging:** Integrated with **LangSmith** for end-to-end tracing and monitoring of the entire application pipeline.
 
 ## 🧠 Use Case Examples
 
@@ -38,12 +38,12 @@ Ask complex questions just like you would to a data analyst:
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Backend**          | ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)                                                                                                             |
 | **Frontend**         | ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)                                                                                       |
-| **LLM**              | ![Google Gemini](https://img.shields.io/badge/Google%20Gemini-8E75B9?style=for-the-badge&logo=google&logoColor=white) (`gemini-1.5-pro-latest`)                                                     |
-| **Embeddings**       | ![Google Generative AI Embeddings](https://img.shields.io/badge/Google%20Embeddings-4285F4?style=for-the-badge&logo=google&logoColor=white)                                                          |
+| **LLM**              | ![Cohere](https://img.shields.io/badge/Cohere-3755F9?style=for-the-badge&logo=cohere&logoColor=white) (`command-r-plus`)                                                                              |
+| **Embeddings**       | ![Cohere Embeddings](https://img.shields.io/badge/Cohere%20Embeddings-3755F9?style=for-the-badge&logo=cohere&logoColor=white) (`embed-english-v3.0`)                                                  |
 | **Vector Store**     | ![Qdrant](https://img.shields.io/badge/Qdrant-AC1431?style=for-the-badge&logo=qdrant&logoColor=white)                                                                                                 |
 | **Framework**        | ![LangChain](https://img.shields.io/badge/LangChain-008653?style=for-the-badge&logo=langchain&logoColor=white)                                                                                       |
+| **Tracing**          | ![LangSmith](https://img.shields.io/badge/LangSmith-FD6801?style=for-the-badge&logo=langsmith&logoColor=white)                                                                                        |
 | **Database Toolkit** | ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white)                                                                                     |
-| **Deployment**       | ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) (for Qdrant)                                                                             |
 
 ## 📁 Getting Started
 
@@ -51,7 +51,7 @@ Follow these steps to set up and run the project locally.
 
 ### 1. Clone the Repository
 ```bash
-git clone "https://github.com/hassan97mahmoud/Explore_SQL_DB_by_NL.git"
+git clone https://github.com/hassan97mahmoud/Explore_SQL_DB_by_NL.git
 cd Explore_SQL_DB_by_NL
 2. Create and Activate a Virtual Environment
 code
@@ -73,30 +73,36 @@ code
 Env
 # .env file
 
-# Get your key from Google AI Studio: https://makersuite.google.com/
-GOOGLE_API_KEY="YOUR_GOOGLE_API_KEY"
+# Get your key from the Cohere Dashboard: https://dashboard.cohere.com/
+COHERE_API_KEY="YOUR_COHERE_API_KEY_HERE"
 
-# URL of your Qdrant instance (e.g., http://localhost:6333)
-QDRANT_HOST="http://localhost:6333"
-QDRANT_API_KEY=""
+# --- LangSmith Credentials ---
+# Get these from https://smith.langchain.com/
+LANGCHAIN_TRACING_V2="true"
+LANGCHAIN_API_KEY="YOUR_LANGSMITH_API_KEY_HERE"
+LANGCHAIN_PROJECT="Explore_SQL_DB_by_NL"
 
-# Database Connection String
+# --- Qdrant Vector Database Configuration ---
+QDRANT_HOST="YOUR_QDRANT_HOST_URL"
+QDRANT_API_KEY="YOUR_QDRANT_API_KEY"
+
+# --- Database Connection String ---
 DB_CONNECTION_STRING="sqlite:///Chinook.db"
 
-# Password for the Streamlit Admin UI
+# --- Streamlit Admin UI Password ---
 ADMIN_PASSWORD="admin"
 5. Set Up Qdrant and the Database
 Qdrant: The easiest way to run Qdrant is with Docker:
 code
 Bash
 docker run -p 6333:6333 qdrant/qdrant
-Database: This project is configured to use the Chinook.db sample database. Make sure this file is in your project directory.
+Database: This project is configured to use the Chinook.db sample database. Ensure this file is in your project directory.
 ▶️ How to Run
 You need to run the backend and frontend servers in two separate terminals.
 1. Start the Backend Server (Terminal 1):
 code
 Bash
-python App1b.py
+python App2b.py
 Wait until you see the message Uvicorn running on http://127.0.0.1:8000.
 2. Start the Frontend Application (Terminal 2):
 code
@@ -106,5 +112,5 @@ This will open the web application in your browser.
 📄 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 📬 Contact
-Hassan Abu Esmael - "hmaboesmael@gmail.com"
-Project Link: "https://github.com/hassan97mahmoud/Explore_SQL_DB_by_NL"
+Hassan Abu Esmael - hmaboesmael@gmail.com
+Project Link: https://github.com/hassan97mahmoud/Explore_SQL_DB_by_NL
