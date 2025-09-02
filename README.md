@@ -1,3 +1,5 @@
+code
+Markdown
 # 📄 🗣️ Explore SQL DB with Natural Language
 
 <div align="center">
@@ -9,17 +11,25 @@
 
 </div>
 
-This project provides a powerful and intuitive web interface that allows users to interact with any SQL database using plain English. It leverages the power of state-of-the-art Large Language Models (LLMs) to convert natural language questions into executable SQL queries, runs them against the database, and returns the answers in a conversational format.
+This project provides a powerful and intuitive web interface that allows users to interact with any SQL database using plain English. It leverages the power of state-of-the-art Large Language Models (LLMs) to convert natural language questions into executable SQL queries, runs them against the database, and returns the answers in a polished, multi-component conversational format.
+
+---
+
+## 🎥 Live Demo
+
+![Demo GIF of the Application](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWZnaGlmNWxhZnA4ZjhxN21qbzVvc215eG15ZGF2b3QzdHF0NmYwaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/your-gif-id/giphy.gif)
+*A brief demonstration of the application's chat interface. **[Note: Replace the link above with a link to your own demo GIF or video!]***
 
 ---
 
 ## 🚀 Key Features
 
+-   **Conversational Chat Interface:** Interact with your data through a familiar chat UI that remembers conversation history.
+-   **Rich, Structured Responses:** Answers are displayed professionally with the main finding in bold, the raw data in an interactive table, and the generated SQL query in a collapsible section.
 -   **Natural Language to SQL:** Converts complex user questions into accurate SQL queries.
 -   **Dynamic Schema Loading:** Automatically inspects the connected database at startup, making the application adaptable to any SQL database without code changes.
 -   **Dual Architecture:** Built with a robust **FastAPI** backend for logic and a user-friendly **Streamlit** frontend for interaction.
 -   **Powered by Cohere:** Utilizes the `command-r-plus` model for advanced language understanding and high-quality query generation.
--   **Few-Shot Learning:** Improves query generation accuracy by retrieving similar examples from a **Qdrant** vector database.
 -   **Professional Debugging:** Integrated with **LangSmith** for end-to-end tracing and monitoring of the entire application pipeline.
 
 ## 🧠 Use Case Examples
@@ -92,22 +102,21 @@ DB_CONNECTION_STRING="sqlite:///Chinook.db"
 # --- Streamlit Admin UI Password ---
 ADMIN_PASSWORD="admin"
 5. Set Up Qdrant and the Database
-Qdrant: The easiest way to run Qdrant is with Docker:
-code
-Bash
-docker run -p 6333:6333 qdrant/qdrant
+Qdrant: The easiest way to run Qdrant is with Docker: docker run -p 6333:6333 qdrant/qdrant
 Database: This project is configured to use the Chinook.db sample database. Ensure this file is in your project directory.
 ▶️ How to Run
 You need to run the backend and frontend servers in two separate terminals.
 1. Start the Backend Server (Terminal 1):
 code
 Bash
+# Corrected filename
 python App2b.py
 Wait until you see the message Uvicorn running on http://127.0.0.1:8000.
 2. Start the Frontend Application (Terminal 2):
 code
 Bash
-streamlit run App1f.py
+# Corrected filename
+streamlit run App2f.py
 This will open the web application in your browser.
 📄 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
