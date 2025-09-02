@@ -38,3 +38,7 @@ SQLAlchemy              # Main Job: A SQL toolkit and Object-Relational Mapper (
 
 python-multipart        # Main Job: A library for handling multipart/form-data, which is used for file uploads.
                         # Role in Code: Facilitates file uploads in the FastAPI backend, allowing users to submit files through the API.
+langchain-cohere        # Main Job: The specific LangChain integration for Cohere's language models.
+                        # Role in Code: Provides the Cohere class and related utilities to connect to and use Cohere's AI models.
+pysqlite3-binary        # Main Job: A SQLite database adapter for Python.
+                        # Role in Code: Allows for SQLite database operations within the application.

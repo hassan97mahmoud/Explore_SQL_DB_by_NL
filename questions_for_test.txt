@@ -1,0 +1,60 @@
+# questions_for_test.txt
+# A list of natural language questions to test the Text-to-SQL application on the Chinook database.
+
+### Simple Questions (Single Table)
+
+# Simple Selection
+Show me the names of all artists.
+List all employees.
+What are the different music genres?
+
+# Filtering with WHERE
+Show all customers from Brazil.
+Find the employee named 'Nancy Edwards'.
+List all tracks that cost more than 0.99.
+
+# Counting and Aggregation
+How many tracks are there in total?
+What is the total number of employees?
+What is the average price of a track?
+
+# Ordering and Limits (ORDER BY, LIMIT)
+Show the top 10 longest tracks in milliseconds.
+List the 5 most recent invoices by date.
+Find the 5 most expensive tracks.
+
+# Searching with LIKE
+Find all tracks that have the word 'Rock' in their name.
+List all artists whose names start with 'A'.
+
+
+### Medium Complexity Questions (Joins)
+
+# Two-Table Joins
+List all albums by the artist 'Queen'.
+What are the names of all the tracks on the album 'For Those About To Rock We Salute You'?
+Who is the customer with the email 'luisg@embraer.com.br'?
+Find all tracks that are of the 'MPEG audio file' media type.
+
+# Three-Table Joins
+What are the names of the tracks in the 'Rock' genre?
+List all tracks composed by Angus Young.
+Which customers have bought tracks of the 'Jazz' genre?
+
+
+### Complex Questions (Joins, Aggregations, Grouping)
+
+# Grouping and Counting (GROUP BY)
+How many customers are there in each country? List the countries and the customer count.
+Count the number of albums for each artist.
+Show the total number of tracks in each genre.
+
+# Grouping and Aggregation with Joins
+Which artist has the most albums?
+What is the total revenue from customers in Germany?
+Which genre has the most tracks?
+
+# Advanced Scenarios
+Who is the top sales support representative based on the total value of invoices they've handled?
+Which customer has spent the most money overall?
+List the top 5 selling tracks of all time.
