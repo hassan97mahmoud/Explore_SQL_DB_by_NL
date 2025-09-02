@@ -110,7 +110,7 @@ You need to run the backend and frontend servers in two separate terminals.
 code
 Bash
 # Corrected filename
-python App2b.py
+python App3b.py
 Wait until you see the message Uvicorn running on http://127.0.0.1:8000.
 2. Start the Frontend Application (Terminal 2):
 code
