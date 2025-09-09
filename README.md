@@ -1,5 +1,3 @@
-code
-Markdown
 # 📄 🗣️ Explore SQL DB with Natural Language
 
 <div align="center">
@@ -17,8 +15,9 @@ This project provides a powerful and intuitive web interface that allows users t
 
 ## 🎥 Live Demo
 
-![Demo GIF of the Application](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWZnaGlmNWxhZnA4ZjhxN21qbzVvc215eG15ZGF2b3QzdHF0NmYwaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/your-gif-id/giphy.gif)
-*A brief demonstration of the application's chat interface. **[Note: Replace the link above with a link to your own demo GIF or video!]***
+Click the badge below to watch a video demonstration of the project in action, hosted directly on GitHub.
+
+[![Watch the Demo Video](https://img.shields.io/badge/Watch-Demo%20Video-red?style=for-the-badge&logo=youtube)](https://github.com/hassan97mahmoud/Explore_SQL_DB_by_NL/blob/main/demo/speek_SQL_demo.mp4)
 
 ---
 
@@ -26,9 +25,8 @@ This project provides a powerful and intuitive web interface that allows users t
 
 -   **Conversational Chat Interface:** Interact with your data through a familiar chat UI that remembers conversation history.
 -   **Rich, Structured Responses:** Answers are displayed professionally with the main finding in bold, the raw data in an interactive table, and the generated SQL query in a collapsible section.
--   **Natural Language to SQL:** Converts complex user questions into accurate SQL queries.
 -   **Dynamic Schema Loading:** Automatically inspects the connected database at startup, making the application adaptable to any SQL database without code changes.
--   **Dual Architecture:** Built with a robust **FastAPI** backend for logic and a user-friendly **Streamlit** frontend for interaction.
+-   **Natural Language to SQL:** Converts complex user questions into accurate SQL queries.
 -   **Powered by Cohere:** Utilizes the `command-r-plus` model for advanced language understanding and high-quality query generation.
 -   **Professional Debugging:** Integrated with **LangSmith** for end-to-end tracing and monitoring of the entire application pipeline.
 
@@ -94,7 +92,7 @@ LANGCHAIN_PROJECT="Explore_SQL_DB_by_NL"
 
 # --- Qdrant Vector Database Configuration ---
 QDRANT_HOST="YOUR_QDRANT_HOST_URL"
-QDRANT_API_KEY="YOUR_QDRANT_API_KEY"
+QDRANT_API_KEY="YOUR_QDRANT_API_KEY" # Leave empty for local Docker
 
 # --- Database Connection String ---
 DB_CONNECTION_STRING="sqlite:///Chinook.db"
@@ -109,13 +107,13 @@ You need to run the backend and frontend servers in two separate terminals.
 1. Start the Backend Server (Terminal 1):
 code
 Bash
-# Corrected filename
+# Use the final version of the backend
 python App3b.py
 Wait until you see the message Uvicorn running on http://127.0.0.1:8000.
 2. Start the Frontend Application (Terminal 2):
 code
 Bash
-# Corrected filename
+# Use the final version of the frontend
 streamlit run App2f.py
 This will open the web application in your browser.
 📄 License
