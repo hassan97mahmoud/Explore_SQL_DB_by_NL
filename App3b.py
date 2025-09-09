@@ -1,5 +1,3 @@
-# App3b.py (Backend - Final Version with Dynamic Schema Loading)
-
 # --- Imports ---
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field

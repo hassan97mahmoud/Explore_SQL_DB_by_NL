@@ -1,5 +1,3 @@
-# App2f.py (Frontend - Professional Chat UI Version)
-
 # --- Imports ---
 import streamlit as st
 import requests
@@ -228,7 +226,7 @@ def render_admin_ui():
             st.json(health_status)
 
 # --- Main Application Logic ---
-st.markdown('<div class="fixed-title"><h1>Natural Language to SQL Query Engine</h1></div>', unsafe_allow_html=True)
+st.markdown('<div class="fixed-title"><h1>Explore and Chat with Your SQL DB by Natural Language </h1></div>', unsafe_allow_html=True)
 
 if "app_mode" not in st.session_state:
     st.session_state.app_mode = "login"

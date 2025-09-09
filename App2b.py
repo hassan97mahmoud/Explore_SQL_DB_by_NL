@@ -1,5 +1,3 @@
-# App2b.py (Backend - Final Cohere Version with All Functions Restored)
-
 # --- Imports ---
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
