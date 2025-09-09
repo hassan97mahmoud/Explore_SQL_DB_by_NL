@@ -114,7 +114,7 @@ Wait until you see the message Uvicorn running on http://127.0.0.1:8000.
 code
 Bash
 # Use the final version of the frontend
-streamlit run App2f.py
+streamlit run App3f.py
 This will open the web application in your browser.
 📄 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
